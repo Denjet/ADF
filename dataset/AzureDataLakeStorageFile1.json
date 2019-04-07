@@ -22,6 +22,7 @@
 				"columnDelimiter": ",",
 				"rowDelimiter": "",
 				"nullValue": "\\N",
+				"encodingName": null,
 				"treatEmptyAsNull": true,
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
