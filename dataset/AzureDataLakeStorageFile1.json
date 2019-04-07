@@ -6,6 +6,16 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureBlobFSFile",
+		"structure": [
+			{
+				"name": "ProductPrice",
+				"type": "Decimal"
+			},
+			{
+				"name": "ProductID",
+				"type": "String"
+			}
+		],
 		"typeProperties": {
 			"format": {
 				"type": "TextFormat",
