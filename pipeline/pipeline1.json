@@ -60,7 +60,14 @@
 					"sink": {
 						"type": "AzureBlobFSSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"ProductPrice": "ProductPrice",
+							"ProductID": "ProductID"
+						}
+					}
 				},
 				"inputs": [
 					{
