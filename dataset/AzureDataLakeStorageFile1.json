@@ -27,8 +27,8 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
-			"fileName": "auctiondata.csv",
-			"folderPath": ""
+			"fileName": "",
+			"folderPath": "datalaketest"
 		}
 	}
 }
