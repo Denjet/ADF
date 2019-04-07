@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DataFactoryFlow"
+		},
+		"AzureBlobStorageDFTest_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorageFile1_properties_typeProperties_fileName": {
+			"value": "processedproducstdatalake.csv"
+		},
+		"AzureDataLakeStorageFile1_properties_typeProperties_folderPath": {
+			"value": "datalaketest"
+		},
+		"InputBlobStorageData_properties_typeProperties_fileName": {
+			"value": "auctiondata.csv"
+		},
+		"InputBlobStorageData_properties_typeProperties_folderPath": {
+			"value": "rawdata"
+		},
+		"InputBlobStorageDataOut_properties_typeProperties_fileName": {
+			"value": "processedproducts.csv"
+		},
+		"InputBlobStorageDataOut_properties_typeProperties_folderPath": {
+			"value": "findata"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://datafactorytestdlservice.dfs.core.windows.net"
+		}
+	}
+}
