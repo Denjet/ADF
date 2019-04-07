@@ -20,7 +20,14 @@
 					"sink": {
 						"type": "BlobSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"ProductID": "ProductID",
+							"ProductPrice": "ProductPrice"
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -31,6 +38,39 @@
 				"outputs": [
 					{
 						"referenceName": "InputBlobStorageDataOut",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy Data2",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "AzureBlobFSSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "InputBlobStorageData",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureDataLakeStorageFile1",
 						"type": "DatasetReference"
 					}
 				]
