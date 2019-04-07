@@ -1,0 +1,35 @@
+{
+	"name": "InputBlobStorageData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageDFTest",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "ProductPrice",
+				"type": "Decimal"
+			},
+			{
+				"name": "ProductID",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"quoteChar": "\"",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "auctiondata.csv",
+			"folderPath": "rawdata"
+		}
+	}
+}
