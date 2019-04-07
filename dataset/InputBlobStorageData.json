@@ -8,12 +8,12 @@
 		"type": "AzureBlob",
 		"structure": [
 			{
-				"name": "ProductID",
-				"type": "String"
-			},
-			{
 				"name": "ProductPrice",
 				"type": "Decimal"
+			},
+			{
+				"name": "ProductID",
+				"type": "String"
 			}
 		],
 		"typeProperties": {
@@ -21,10 +21,12 @@
 				"type": "TextFormat",
 				"columnDelimiter": ",",
 				"rowDelimiter": "",
+				"quoteChar": "\"",
 				"nullValue": "\\N",
+				"encodingName": null,
 				"treatEmptyAsNull": true,
 				"skipLineCount": 0,
-				"firstRowAsHeader": false
+				"firstRowAsHeader": true
 			},
 			"fileName": "auctiondata.csv",
 			"folderPath": "rawdata"
